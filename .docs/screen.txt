@@ -1,0 +1,128 @@
+Recapitulare MADCTL (0x36) pe controlere tip GC9107 / ST7789:
+	•	bit 7 (MY) – vertical refresh order (mirror pe Y)
+	•	bit 6 (MX) – horizontal refresh order (mirror pe X)
+	•	bit 5 (MV) – row/col exchange (rotație 90°)
+	•	bit 4 (ML) – vertical refresh order (rarely used)
+	•	bit 3 (BGR) – 0=RGB, 1=BGR
+	•	bit 2 (MH) – orizontal refresh order (rarely used)
+	•	bit 1-0 – reserved
+
+⸻
+
+Exemple clasice pentru rotații (16-bit RGB565)
+
+Orientare
+MADCTL
+0° RGB
+0x00
+0° BGR
+0x08
+90° RGB
+0x20
+90° BGR
+0x28
+180° RGB
+0x40
+180° BGR
+0x48
+270° RGB
+0x60
+270° BGR
+0x68
+
+
+Tabel: Rotații și RGB/BGR
+Rotație
+RGB
+BGR
+0° (default)
+0x00
+0x08
+90° (rotate CW)
+0x20
+0x28
+180°
+0x40
+0x48
+270°
+0x60
+0x68
+
+
+Tabel: Mirror (flip X/Y)
+Orientare
+RGB
+BGR
+Mirror X (MX=1)
+0x80
+0x88
+Mirror Y (MY=1)
+0x40
+0x48
+Mirror X+Y
+0xC0
+0xC8
+
+
+MADCTL – combinații extinse (MX/MY/MV toate la dispoziție)
+MX
+MY
+MV
+Descriere
+RGB
+BGR
+0
+0
+0
+0° normal
+0x00
+0x08
+1
+0
+0
+mirror X
+0x80
+0x88
+0
+1
+0
+mirror Y
+0x40
+0x48
+1
+1
+0
+180° (X+Y mirror)
+0xC0
+0xC8
+0
+0
+1
+90° CW
+0x20
+0x28
+1
+0
+1
+90° CW + mirror X
+0xA0
+0xA8
+0
+1
+1
+90° CW + mirror Y (270° CW)
+0x60
+0x68
+1
+1
+1
+90° CW + mirror X+Y (270°)
+0xE0
+0xE8
+
+
+🔑 Observații
+	•	Bitul BGR (0x08) doar inversează ordinea roșu ↔ albastru.
+	•	MX/MY/MV sunt cei care fac toată treaba de rotație și mirror.
+	•	În practică, la panouri mici gen GC9107, folosim aproape mereu cele 4 combinații standard (0°,90°,180°,270°) cu BGR.
+	•	Restul combinațiilor (mirror X/Y) sunt mai degrabă pentru aplicații unde trebuie imagine „oglindită”.

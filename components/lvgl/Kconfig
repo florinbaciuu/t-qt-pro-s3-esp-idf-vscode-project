@@ -1,0 +1,15 @@
+# Kconfig file for LVGL v9.3.0
+
+menu "LVGL configuration"
+
+	# Define CONFIG_LV_CONF_SKIP so we can use LVGL
+	# without lv_conf.h file, the lv_conf_internal.h and
+	# lv_conf_kconfig.h files are used instead.
+	config LV_CONF_SKIP
+		bool "Check this to not use custom lv_conf.h"
+		default n
+
+	config LV_CONF_MINIMAL
+		bool "LVGL minimal configuration"
+
+endmenu

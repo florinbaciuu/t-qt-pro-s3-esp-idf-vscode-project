@@ -1,0 +1,23 @@
+Last login: Tue Jul 15 13:50:43 on ttys005
+Checking "python3" ...
+Python 3.12.9
+"python3" has been detected
+Activating ESP-IDF 5.4
+Setting IDF_PATH to '/Users/florinbaciu/esp/v5.4.2/esp-idf'.
+* Checking python version ... 3.12.9
+* Checking python dependencies ... OK
+* Deactivating the current ESP-IDF environment (if any) ... find /Users/florinbaciu/Desktop/workspace/lilygo-tqtpros3-esp-idf-project/ -name .DS_Store -deleteOK
+* Establishing a new ESP-IDF environment ... OK
+* Identifying shell ... zsh
+* Detecting outdated tools in system ... OK - no outdated tools found
+* Shell completion ... Autocompletion code generated
+
+Done! You can now compile ESP-IDF projects.
+Go to the project directory and run:
+
+  idf.py build
+╭─    🏠   ~                                    | RAM: 5/8GB ⏰  14:04:02 
+╰─ find /Users/florinbaciu/Desktop/workspace/lilygo-tqtpros3-esp-idf-project/ -name .DS_Store -delete
+
+╭─    🏠   ~                        | RAM: 5/8GB ⌛  157ms ⏰  14:04:03 
+╰─ 
