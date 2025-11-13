@@ -58,7 +58,7 @@
 		"editor.guides.bracketPairsHorizontal": "active",
 		"editor.guides.highlightActiveIndentation": true,
 		"editor.guides.indentation": true,
-		"editor.hover.enabled": true,
+		"editor.hover.enabled": "on",
 		"editor.hover.sticky": true,
 		"editor.hover.above": true,
 		"editor.minimap.showSlider": "always",
@@ -221,9 +221,9 @@
 		"C_Cpp.default.includePath": [
 			"${workspaceFolder}/**"
 		],
-		"C_Cpp.intelliSenseEngine": "default",
+		"C_Cpp.intelliSenseEngine": "disabled", // disabled, Tag Parser
 		"C_Cpp.intelliSenseCacheSize": 5120,
-		"C_Cpp.autocomplete": "default",
+		"C_Cpp.autocomplete": "disabled", // disabled, Default
 		"C_Cpp.clang_format_fallbackStyle": "Visual Studio",
 		"C_Cpp.autocompleteAddParentheses": true,
 		// Hints
@@ -413,6 +413,14 @@
 		],
 		"idf.enableCCache": true,
 		"idf.enableIdfComponentManager": false,
+		"clangd.inactiveRegions.useBackgroundHighlight": true,
+		"clangd.detectExtensionConflicts": true,
+		"clangd.enable": true,
+		//--------
+		"css.completion.completePropertyWithSemicolon": true,
+		//----------------------------------------------------
+		"terminal.integrated.suggest.enabled": true,
+		"terminal.integrated.suggest.insertTrailingSpace": true,
 		//"cmakeIntelliSence.cmakePath": "/Users/florinbaciu/.espressif/tools/cmake/3.30.2/cmake-3.30.2-macos-universal/CMake.app/Contents/bin",
 		//"cmake.cmakePath": "/Users/florinbaciu/.espressif/tools/cmake/3.30.2/cmake-3.30.2-macos-universal/CMake.app/Contents/bin",
 		//----------------------------------------------------

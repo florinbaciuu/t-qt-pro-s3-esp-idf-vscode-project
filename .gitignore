@@ -1,18 +1,4 @@
-# Ignoră folderele:
 build/
-.devcontainer/
-.vscode/
 .DS_Store
-# CMake files
-CMakeFiles/
-#------------------------------------
-#Icon
-desktop.ini
-#------------------------------------
-# Thumbnails
-Thumbs.db
-#------------------------------------
-# CMake cache files
-CMakeCache.txt
-#------------------------------------
-#------------------------------------
+.vscode
+.cache/
