@@ -30,7 +30,6 @@ extern "C" {
 // #include "esp_system.h"
 // #include "soc/soc_caps.h"
 
-
 #include "esp_lcd_gc9107.h"
 #include "esp_lcd_panel_io.h"
 #include "esp_lcd_panel_ops.h"
@@ -172,7 +171,7 @@ extern "C" void app_main(void) {
     {0x29, NULL, 0, 100},             // Display ON
   };
 
-  esp_lcd_panel_io_tx_param(io_handle, 0x29, NULL, 0); //echivalent cu {0x29, NULL, 0, 100},  
+  esp_lcd_panel_io_tx_param(io_handle, 0x29, NULL, 0);  //echivalent cu {0x29, NULL, 0, 100},
 
   ESP_LOGI("tft", "Install GC9107 panel driver");
   esp_lcd_panel_handle_t panel_handle = NULL;
@@ -201,13 +200,12 @@ Unele versiuni de panou au zone „dummy” de 2 pixeli pe X și 1 pe Y. */
   ESP_ERROR_CHECK(esp_lcd_panel_set_gap(panel_handle, 2, 1));  //special pt GC9107
   ESP_ERROR_CHECK(esp_lcd_panel_disp_on_off(panel_handle, true));
 
-
 /* Dacă panoul e pe BGR (MADCTL.BGR = 1) – vizual corect pe ecran BGR */
-#define COL_RED    0x07E0   // verde în standard, dar la tine e roșu
-#define COL_GREEN  0x001F   // albastru în standard, dar la tine e verde
-#define COL_BLUE   0xF800   // roșu în standard, dar la tine e albastru
-#define COL_WHITE  0xFFFF
-#define COL_BLACK  0x0000
+#define COL_RED   0x07E0  // verde în standard, dar la tine e roșu
+#define COL_GREEN 0x001F  // albastru în standard, dar la tine e verde
+#define COL_BLUE  0xF800  // roșu în standard, dar la tine e albastru
+#define COL_WHITE 0xFFFF
+#define COL_BLACK 0x0000
   uint16_t selected_color = COL_RED;  // aici selecteaza culoarea
   static uint16_t color_buf[128 * 128];
   for (int i = 0; i < 128 * 128; i++) {

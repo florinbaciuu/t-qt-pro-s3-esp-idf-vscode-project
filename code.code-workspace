@@ -208,6 +208,9 @@
 		"accessibility.underlineLinks": true,
 		//------------------------------------------------------------------
 		//
+		"C_Cpp.intelliSenseEngine": "default", // disabled, Tag Parser
+		"C_Cpp.intelliSenseCacheSize": 5120,
+		"C_Cpp.autocomplete": "default", // disabled, Default
 		"[cpp]": {
 			"editor.wordBasedSuggestions": "currentDocument",
 			"editor.semanticHighlighting.enabled": true,
@@ -215,15 +218,13 @@
 			"editor.suggest.insertMode": "replace"
 		},
 		"C_Cpp.default.browse.limitSymbolsToIncludedHeaders": true,
+		"C_Cpp.enhancedColorization": "enabled",
 		"C_Cpp.default.browse.path": [
 			"${workspaceFolder}"
 		],
 		"C_Cpp.default.includePath": [
 			"${workspaceFolder}/**"
 		],
-		"C_Cpp.intelliSenseEngine": "disabled", // disabled, Tag Parser
-		"C_Cpp.intelliSenseCacheSize": 5120,
-		"C_Cpp.autocomplete": "disabled", // disabled, Default
 		"C_Cpp.clang_format_fallbackStyle": "Visual Studio",
 		"C_Cpp.autocompleteAddParentheses": true,
 		// Hints
@@ -414,8 +415,8 @@
 		"idf.enableCCache": true,
 		"idf.enableIdfComponentManager": false,
 		"clangd.inactiveRegions.useBackgroundHighlight": true,
-		"clangd.detectExtensionConflicts": true,
-		"clangd.enable": true,
+		"clangd.detectExtensionConflicts": false,
+		"clangd.enable": false,
 		//--------
 		"css.completion.completePropertyWithSemicolon": true,
 		//----------------------------------------------------
